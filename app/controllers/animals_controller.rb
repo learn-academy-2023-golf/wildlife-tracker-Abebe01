@@ -22,9 +22,9 @@ class AnimalsController < ApplicationController
         animal = Animal.find(params[:id])
         animal.update(animal_params)
         if animal.valid?
-            render json: student.error
+            render json: animal.error
         else 
-            render json: student.errors
+            render json: animal.errors
         end
     end
 
@@ -33,7 +33,7 @@ class AnimalsController < ApplicationController
         if animal.destroy
             render json: animal
         else 
-            render json: student.errors
+            render json: animal.errors
         end
     end
 
